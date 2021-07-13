@@ -1,6 +1,6 @@
 # JavaFX_Vehicle_Managment_System
 
-This is a project me and my team created as our OOP project. This is a desktop application created based on MVC (Model, View, Controller) Architecture. 
+This is a project me and my team created as our OOP project in our 2nd year. This is a desktop application created based on MVC (Model, View, Controller) Architecture. 
 
 We have used following applications when creating our project;
 1. JavaFX as platform

@@ -30,6 +30,6 @@ Payments are recorded. The vehicle isn't removed from the list but status change
 
 ## How to setup the project
 - Install IntelliJ
-- Open this project
+- Open this project (Unzip the zip file)
 - Add the libraries that are given in the Libraries Folder
 - Admin account = xyz@yahoo.com pswd = 1234 

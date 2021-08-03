@@ -35,3 +35,5 @@ Payments are recorded. The vehicle isn't removed from the list but status change
 - Admin account = xyz@yahoo.com pswd = 1234 
 
 ![](images/vehicleman.png)
+![](images/home.png)
+

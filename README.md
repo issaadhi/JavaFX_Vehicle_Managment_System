@@ -34,4 +34,4 @@ Payments are recorded. The vehicle isn't removed from the list but status change
 - Add the libraries that are given in the Libraries Folder
 - Admin account = xyz@yahoo.com pswd = 1234 
 
-![] (images/vehicleman.png)
+![](images/vehicleman.png)

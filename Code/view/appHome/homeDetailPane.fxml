@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="detailAnchorPane" prefHeight="700.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.appHome.HomeDetailPaneController">
+   <children>
+      <ImageView blendMode="MULTIPLY" fitHeight="700.0" fitWidth="980.0" opacity="0.8" pickOnBounds="true">
+         <image>
+            <Image url="@../../images/7.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="108.0" layoutY="41.0" style="-fx-border-color: #000000;" text=" WELCOME TO SAHAN TRADERS (PVT) LTD. ">
+         <font>
+            <Font name="Nirmala UI Semilight" size="40.0" />
+         </font></Label>
+      <ImageView fx:id="imageView" fitHeight="399.0" fitWidth="543.0" layoutX="69.0" layoutY="220.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../images/f2628c4827cb50ad315be4372218313b.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="69.0" layoutY="533.0" />
+      <Label fx:id="label" alignment="TOP_CENTER" layoutX="269.0" layoutY="108.0" prefHeight="47.0" prefWidth="443.0" textAlignment="RIGHT">
+         <font>
+            <Font name="Nirmala UI Bold" size="36.0" />
+         </font></Label>
+      <Label fx:id="label2" alignment="TOP_CENTER" layoutX="427.0" layoutY="166.0" prefHeight="28.0" prefWidth="131.0" style="-fx-background-color: #000000;" textAlignment="RIGHT" textFill="WHITE">
+         <font>
+            <Font name="Nirmala UI Semilight" size="17.0" />
+         </font></Label>
+      <Label fx:id="userlabel" alignment="TOP_CENTER" layoutX="681.0" layoutY="336.0" prefHeight="26.0" prefWidth="216.0" style="-fx-border-color: #000000;" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Nirmala UI Semilight" size="17.0" />
+         </font></Label>
+      <Label fx:id="vehlabel" alignment="TOP_CENTER" layoutX="681.0" layoutY="475.0" prefHeight="26.0" prefWidth="216.0" style="-fx-border-color: #000000;" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Nirmala UI Semilight" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="serlabel" alignment="TOP_CENTER" layoutX="681.0" layoutY="426.0" prefHeight="26.0" prefWidth="216.0" style="-fx-border-color: #000000;" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Nirmala UI Semilight" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="paylabel" alignment="TOP_CENTER" layoutX="681.0" layoutY="381.0" prefHeight="26.0" prefWidth="216.0" style="-fx-border-color: #000000;" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Nirmala UI Semilight" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

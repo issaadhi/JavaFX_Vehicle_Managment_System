@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="detailAnchorPane" prefHeight="700.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.vehicleManagement.VehicleDetailPaneController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="690.0" layoutX="5.0" layoutY="5.0" stroke="#002f6c" strokeType="INSIDE" strokeWidth="5.0" width="970.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <Label layoutX="42.0" layoutY="26.0" prefHeight="34.0" prefWidth="246.0" text="VEHICLE INFORMATION" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <TextField fx:id="tvstatus" layoutX="553.0" layoutY="476.0" prefHeight="18.0" prefWidth="187.0" />
+      <TableView fx:id="tviewinfo" layoutX="59.0" layoutY="105.0" onMouseClicked="#setSelectedVehicleToFields" prefHeight="346.0" prefWidth="873.0" AnchorPane.bottomAnchor="390.0" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="115.0">
+        <columns>
+          <TableColumn fx:id="colvnumber" prefWidth="141.0" text="V. Number" />
+            <TableColumn fx:id="colvmodel" prefWidth="226.0" text="V. Model" />
+            <TableColumn fx:id="colvcolour" minWidth="0.0" prefWidth="183.0" text="V. Colour" />
+            <TableColumn fx:id="colvyer" minWidth="0.0" prefWidth="149.0" text="V. Manf. Year" />
+            <TableColumn fx:id="colvstatus" minWidth="0.0" prefWidth="169.0" text="V. Status" />
+        </columns>
+      </TableView>
+      <Button fx:id="buinsert" layoutX="646.0" layoutY="589.0" mnemonicParsing="false" onAction="#insertvehicle" prefHeight="34.0" prefWidth="103.0" text="ADD" AnchorPane.bottomAnchor="77.0" AnchorPane.leftAnchor="646.0" AnchorPane.rightAnchor="231.0" AnchorPane.topAnchor="589.0" />
+      <Button fx:id="budelete" layoutX="773.0" layoutY="588.0" mnemonicParsing="false" onAction="#deletevehicle" prefHeight="34.0" prefWidth="103.0" text="DELETE" />
+      <Button fx:id="buupdate" layoutX="646.0" layoutY="588.0" mnemonicParsing="false" onAction="#updatevehicle" prefHeight="34.0" prefWidth="103.0" text="Update" visible="false" />
+      <ComboBox fx:id="cbx" layoutX="183.0" layoutY="343.0" onAction="#setvaction" prefWidth="150.0" />
+      <Label layoutX="58.0" layoutY="346.0" prefHeight="26.0" prefWidth="114.0" text="Select Action :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchvehicle" layoutX="58.0" layoutY="56.0" prefHeight="31.0" prefWidth="873.0" promptText="Search or Enter Vehicle Detials" AnchorPane.bottomAnchor="603.0" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="66.0" />
+      <FontAwesomeIconView glyphName="SEARCH" layoutX="922.0" layoutY="87.0" text="" />
+      <Label layoutX="52.0" layoutY="404.0" prefHeight="34.0" prefWidth="135.0" text="Vehicle Number" />
+      <TextField fx:id="tvnumber" layoutX="183.0" layoutY="406.0" promptText="Registration Number" />
+      <Label layoutX="52.0" layoutY="474.0" prefHeight="34.0" prefWidth="135.0" text="Vehicle Model" />
+      <Label layoutX="52.0" layoutY="546.0" prefHeight="34.0" prefWidth="135.0" text="Vehicle Colour" />
+      <TextField fx:id="tvmodel" layoutX="183.0" layoutY="476.0" />
+      <TextField fx:id="tvcolour" layoutX="183.0" layoutY="547.0" />
+      <TextField fx:id="tvyear" layoutX="552.0" layoutY="407.0" />
+      <Label layoutX="423.0" layoutY="474.0" prefHeight="34.0" prefWidth="135.0" text="Status" />
+      <Label layoutX="423.0" layoutY="404.0" prefHeight="34.0" prefWidth="135.0" text="Manuf. Year" />
+      <Label fx:id="vnumberLabel" layoutX="58.0" layoutY="445.0" prefHeight="21.0" prefWidth="310.0" textFill="#ee0202" />
+      <Label fx:id="vmodelLabel" layoutX="52.0" layoutY="518.0" prefHeight="21.0" prefWidth="310.0" textFill="RED" />
+      <Label fx:id="vcolorLabel" layoutX="52.0" layoutY="588.0" prefHeight="21.0" prefWidth="310.0" textFill="RED" />
+      <Label fx:id="vyearLabel" layoutX="429.0" layoutY="445.0" prefHeight="21.0" prefWidth="310.0" textFill="RED" />
+      <Label fx:id="vstatusLabel" layoutX="429.0" layoutY="518.0" prefHeight="21.0" prefWidth="310.0" textFill="RED" />
+   </children>
+</AnchorPane>

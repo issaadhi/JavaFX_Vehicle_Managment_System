@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="detailAnchorPane" prefHeight="700.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.userManagement.UserDetailPaneController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="690.0" stroke="#002f6c" strokeType="INSIDE" strokeWidth="5.0" width="970.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <Label layoutX="46.0" layoutY="30.0" text="USER INFORMATION">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <TableView fx:id="userTableView" layoutX="29.0" layoutY="117.0" onMouseClicked="#setSelectedUserToFields" prefHeight="200.0" prefWidth="923.0" AnchorPane.bottomAnchor="390.0" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="115.0">
+        <columns>
+          <TableColumn fx:id="emailColumn" prefWidth="186.0" text="Email" />
+          <TableColumn fx:id="fNameColumn" prefWidth="179.0" text="First Name" />
+            <TableColumn fx:id="lNameColumn" prefWidth="163.0" text="Last Name" />
+            <TableColumn fx:id="uTypeColumn" prefWidth="130.0" text="User Type" />
+            <TableColumn fx:id="passwordColumn" prefWidth="149.0" text="Password" />
+            <TableColumn fx:id="uStatusColumn" prefWidth="88.0" text="User Status" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <TextField fx:id="searchTextField" layoutX="31.0" layoutY="67.0" prefHeight="31.0" prefWidth="911.0" promptText="Search User" AnchorPane.bottomAnchor="603.0" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="66.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <FontAwesomeIconView glyphName="SEARCH" layoutX="925.0" layoutY="87.0" />
+      <Label layoutX="31.0" layoutY="340.0" text="Select Action :" />
+      <Label layoutX="31.0" layoutY="399.0" text="User Email :" />
+      <Label layoutX="27.0" layoutY="465.0" text="User Last Name :" />
+      <Label layoutX="31.0" layoutY="533.0" text="User Password :" />
+      <Label layoutX="575.0" layoutY="399.0" text="User First Name :" />
+      <Label layoutX="575.0" layoutY="465.0" text="User Type :" />
+      <Label layoutX="575.0" layoutY="523.0" text="User Status :" />
+      <TextField fx:id="emaiTextField" layoutX="163.0" layoutY="394.0" onKeyReleased="#checkEmailAvailability" promptText="Please enter Email">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="uFNameTextFiled" layoutX="707.0" layoutY="394.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="ulNameTextFiled" layoutX="163.0" layoutY="460.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <JFXButton buttonType="RAISED" layoutX="575.0" layoutY="623.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#addUser" prefHeight="35.0" prefWidth="90.0" style="-fx-background-color: #eeeeee;" text="ADD" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="575.0" AnchorPane.rightAnchor="315.0" AnchorPane.topAnchor="623.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="deleteButton" buttonType="RAISED" layoutX="690.0" layoutY="623.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#deleteUser" prefHeight="35.0" prefWidth="90.0" style="-fx-background-color: #eeeeee;" text="DELETE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="updateButton" layoutX="575.0" layoutY="623.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#updateUser" prefHeight="35.0" prefWidth="90.0" style="-fx-background-color: #eeeeee;" text="UPDATE" visible="false">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="clearButton" buttonType="RAISED" layoutX="805.0" layoutY="623.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#clearFields" prefHeight="35.0" prefWidth="90.0" style="-fx-background-color: #eeeeee#eeeeee;" text="CLEAR" AnchorPane.rightAnchor="85.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <Label fx:id="emailLabel" alignment="CENTER" layoutX="31.0" layoutY="433.0" prefHeight="21.0" prefWidth="320.0" textFill="#d02a2a" />
+      <Label fx:id="fNameLabel" alignment="CENTER" layoutX="575.0" layoutY="433.0" prefHeight="21.0" prefWidth="320.0" textFill="#d02a2a" />
+      <Label fx:id="lnameLabel" alignment="CENTER" layoutX="31.0" layoutY="503.0" prefHeight="21.0" prefWidth="320.0" textFill="#d02a2a" />
+      <ComboBox fx:id="actionChoiceBox" layoutX="163.0" layoutY="335.0" onAction="#setUserAction" prefHeight="31.0" prefWidth="187.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <ComboBox fx:id="uTypeChoiceBox" layoutX="707.0" layoutY="460.0" prefHeight="31.0" prefWidth="187.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <ComboBox fx:id="uStatusChoiceBox" layoutX="707.0" layoutY="518.0" prefHeight="31.0" prefWidth="187.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <Label fx:id="passwordLabel" alignment="CENTER" layoutX="31.0" layoutY="613.0" prefHeight="21.0" prefWidth="320.0" textFill="#d02a2a" />
+      <PasswordField fx:id="passwordFiled" layoutX="163.0" layoutY="529.0" promptText="Password">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></PasswordField>
+      <PasswordField fx:id="cpasswordFiled" layoutX="163.0" layoutY="572.0" promptText="Confirm Password">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></PasswordField>
+   </children>
+</AnchorPane>

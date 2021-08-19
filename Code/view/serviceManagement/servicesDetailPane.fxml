@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="detailAnchorPane" prefHeight="700.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.serviceManagement.ServiceDetailPaneController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="690.0" layoutX="5.0" layoutY="5.0" stroke="#002f6c" strokeType="INSIDE" strokeWidth="5.0" width="970.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <Label layoutX="42.0" layoutY="31.0" text="SERVICE INFORMATION" AnchorPane.bottomAnchor="642.0" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="734.0" AnchorPane.topAnchor="31.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <TableView fx:id="tvVehicleService" layoutX="31.0" layoutY="115.0" onMouseClicked="#setSelectedVMServiceToFields" prefHeight="192.0" prefWidth="907.0" AnchorPane.bottomAnchor="390.0" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="115.0">
+        <columns>
+          <TableColumn fx:id="colServiceID" prefWidth="116.0" text="Service ID" />
+            <TableColumn fx:id="colVehicleID" prefWidth="151.0" text="Vehicle Number" />
+          <TableColumn fx:id="colServiceDescription" prefWidth="324.0" text="Service Description" />
+            <TableColumn fx:id="colServiceAmount" prefWidth="167.0" text="Service Amount" />
+            <TableColumn fx:id="colServiceDate" prefWidth="137.0" text="Service Date" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <TextField fx:id="tfSearchService" layoutX="31.0" layoutY="66.0" prefHeight="31.0" prefWidth="907.0" promptText="Search Service" AnchorPane.bottomAnchor="603.0" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="66.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <Label layoutX="34.0" layoutY="383.0" text="Service ID" />
+      <Label layoutX="34.0" layoutY="510.0" text="Service Description" />
+      <Label layoutX="546.0" layoutY="409.0" text="Service Amount" />
+      <Label layoutX="546.0" layoutY="475.0" text="Service Date" />
+      <TextField fx:id="tfServiceID" layoutX="229.0" layoutY="378.0" promptText="Please enter Service ID">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="tfServiceDescription" layoutX="229.0" layoutY="505.0" promptText="Please enter Description">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="tfServiceAmount" layoutX="756.0" layoutY="404.0" promptText="Enter Service Amount">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="tfServiceDate" layoutX="751.0" layoutY="470.0" promptText="Enter Service Date">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <JFXButton fx:id="btnADD" buttonType="RAISED" layoutX="587.0" layoutY="621.0" onAction="#addService" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: #eeeeee;" text="ADD" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="605.0" AnchorPane.rightAnchor="306.0" AnchorPane.topAnchor="620.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="btnDELETE" buttonType="RAISED" layoutX="679.0" layoutY="620.0" onAction="#deleteService" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: #eeeeee;" text="DELETE" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="694.0" AnchorPane.rightAnchor="217.0" AnchorPane.topAnchor="620.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="btnCLEAR" buttonType="RAISED" layoutX="856.0" layoutY="602.0" onAction="#clearService" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: #eeeeee;" text="CLEAR" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="780.0" AnchorPane.rightAnchor="131.0" AnchorPane.topAnchor="620.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="btnUPDATE" buttonType="RAISED" layoutX="505.0" layoutY="620.0" onAction="#updateService" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: #eeeeee;" text="UPDATE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <FontAwesomeIconView glyphName="SEARCH" layoutX="911.0" layoutY="85.0" text="" />
+      <Label layoutX="34.0" layoutY="449.0" text="Vehicle Number" />
+      <TextField fx:id="tfVehicleID" layoutX="229.0" layoutY="444.0" promptText="Please enter Vehicle ID">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Label fx:id="sIDLabel" layoutX="42.0" layoutY="420.0" prefHeight="21.0" prefWidth="371.0" textFill="RED" />
+      <Label fx:id="vNumberLabel" layoutX="42.0" layoutY="475.0" prefHeight="21.0" prefWidth="371.0" textFill="RED" />
+      <Label fx:id="sDescLabel" layoutX="44.0" layoutY="544.0" prefHeight="21.0" prefWidth="371.0" textFill="RED" />
+      <Label fx:id="sAmountLabel" layoutX="546.0" layoutY="439.0" prefHeight="21.0" prefWidth="371.0" textFill="RED" />
+      <Label fx:id="sDateLabel" layoutX="546.0" layoutY="510.0" prefHeight="21.0" prefWidth="371.0" textFill="RED" />
+   </children>
+</AnchorPane>

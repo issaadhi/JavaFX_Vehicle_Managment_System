@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="baseAnchorPane" prefHeight="900.0" prefWidth="1280.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.appHome.HomeBaseController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="1280.0" style="-fx-background-color: linear-gradient(to left, #f1cc8b, #f4c370, #f8b954, #fbae35, #ffa200);;" AnchorPane.bottomAnchor="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="504.0" layoutY="127.0" text="VEHICLE MANAGEMENT SYSTEM">
+               <font>
+                  <Font name="Calibri" size="39.0" />
+               </font>
+            </Label>
+            <Label layoutX="483.0" layoutY="63.0" text="SAHAN TRADERS">
+               <font>
+                  <Font name="Mongolian Baiti" size="68.0" />
+               </font>
+            </Label>
+            <Label fx:id="userNameLabel" alignment="CENTER_RIGHT" layoutX="1091.0" layoutY="26.0" prefHeight="21.0" prefWidth="657.0" text="User" AnchorPane.bottomAnchor="153.0" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="26.0">
+               <graphic>
+                  <FontAwesomeIconView glyphName="USER" size="15" />
+               </graphic>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <MenuButton layoutX="1140.0" layoutY="21.0" mnemonicParsing="false" style="-fx-background-color: #f5f5f5#f5f5f5;" text="Account">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#logout" text="Logout" />
+              </items>
+            </MenuButton>
+            <ImageView fitHeight="159.0" fitWidth="250.0" layoutX="170.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/Avrios-ebook-Cost-management-832x540@100.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <SepiaTone level="0.29" />
+         </effect>
+      </AnchorPane>
+      <AnchorPane prefHeight="700.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(to top, #f1cc8b, #f4c370, #f8b954, #fbae35, #ffa200);;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="980.0" AnchorPane.topAnchor="200.0">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="23.0" layoutY="20.0" prefHeight="660.0" prefWidth="260.0" style="-fx-background-color: linear-gradient(to top, #f1cc8b, #f4c370, #f8b954, #fbae35, #ffa200);;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <JFXButton buttonType="RAISED" onAction="#loadHomeDetailPane" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #f57c00;" text="      Home">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="SansSerif Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="81.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/house-png-176.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" onAction="#loadUserManagement" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #f57c00;" text="     User Details">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="SansSerif Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="54.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/add-icon-png-2487.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" onAction="#loadVehicleManagement" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #f57c00;" text=" Vehicle Details">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="SansSerif Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="78.0" fitWidth="69.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../images/vehicle-icon-12447.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" onAction="#loadServiceManagement" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #f57c00;" text="  Service Details">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="SansSerif Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="76.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/services-icon-png-2282%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" onAction="#loadPaymentManagement" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #f57c00;" text="Payment Details">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="67.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/payment-icon-5660.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+         <effect>
+            <ColorAdjust brightness="0.07" contrast="0.07" hue="0.05" saturation="-0.25" />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="detailAnchorPane" layoutX="300.0" layoutY="200.0" prefHeight="700.0" prefWidth="980.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="detailAnchorPane" prefHeight="700.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.paymentManagement.PaymentDetailPaneController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="690.0" layoutY="5.0" stroke="#002f6c" strokeType="INSIDE" strokeWidth="5.0" width="970.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <Label layoutX="42.0" layoutY="32.0" text="PAYMENT INFORMATION">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <TableView fx:id="tbview" layoutX="73.0" layoutY="114.0" onMouseClicked="#setSelectedPaymentToFields" prefHeight="203.0" prefWidth="835.0" AnchorPane.bottomAnchor="390.0" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="115.0">
+         <columns>
+            <TableColumn fx:id="tbPaymentID" prefWidth="75.0" text="Payment_ID" />
+            <TableColumn fx:id="tbVehicleNo" prefWidth="75.0" text="Vehicle No." />
+            <TableColumn fx:id="tbCustomerName" prefWidth="75.0" text="Customer name" />
+            <TableColumn fx:id="tbID" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="tbTP" prefWidth="75.0" text="Telephone" />
+            <TableColumn fx:id="tbAmount" prefWidth="75.0" text="Amount" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <Label layoutX="71.0" layoutY="435.0" text="Payment ID :" />
+      <Label layoutX="73.0" layoutY="501.0" text="Vehicle No :" />
+      <Label layoutX="72.0" layoutY="570.0" text="Customer name :" />
+      <Label layoutX="549.0" layoutY="400.0" text="Customer ID :" />
+      <Label layoutX="548.0" layoutY="475.0" text="Customer TP :" />
+      <Label layoutX="549.0" layoutY="536.0" text="Amount : " />
+      <TextField fx:id="tfPaymentID" layoutX="200.0" layoutY="430.0" onKeyReleased="#checkPaymentAvailability">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="tfVehicleNo" layoutX="200.0" layoutY="496.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="tfCustomerName" layoutX="200.0" layoutY="565.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="tfCustomerID" layoutX="662.0" layoutY="393.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="tfCustomerTP" layoutX="662.0" layoutY="467.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="tfAmount" layoutX="662.0" layoutY="531.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <ComboBox fx:id="ComboBox" layoutX="200.0" layoutY="368.0" onAction="#setPaymentAction" prefHeight="31.0" prefWidth="187.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <Label layoutX="66.0" layoutY="373.0" text="Select Action :" />
+      <TextField fx:id="SearchBox" layoutX="73.0" layoutY="87.0" prefHeight="31.0" prefWidth="835.0" promptText="Search Payment Information" AnchorPane.bottomAnchor="603.0" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="66.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <JFXButton fx:id="bAdd" buttonType="RAISED" layoutX="605.0" layoutY="620.0" onAction="#addPayment" prefHeight="31.0" prefWidth="69.0" style="-fx-background-color: #eeeeee;" text="ADD" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="605.0" AnchorPane.rightAnchor="306.0" AnchorPane.topAnchor="620.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="bDelete" buttonType="RAISED" layoutX="694.0" layoutY="620.0" onAction="#deletePayment" prefHeight="31.0" prefWidth="69.0" style="-fx-background-color: #eeeeee;" text="DELETE" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="694.0" AnchorPane.rightAnchor="217.0" AnchorPane.topAnchor="620.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="bclear" buttonType="RAISED" layoutX="780.0" layoutY="620.0" onAction="#clearFields" prefHeight="31.0" prefWidth="69.0" style="-fx-background-color: #eeeeee;" text="CLEAR" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="780.0" AnchorPane.rightAnchor="131.0" AnchorPane.topAnchor="620.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="bModify" buttonType="RAISED" layoutX="512.0" layoutY="620.0" onAction="#updatePayment" style="-fx-background-color: #eeeeee;" text="UPDATE" />
+      <Label fx:id="paymentLabel" layoutX="71.0" layoutY="470.0" prefHeight="21.0" prefWidth="314.0" textFill="RED" />
+      <FontAwesomeIconView glyphName="SEARCH" layoutX="914.0" layoutY="86.0" />
+      <Label fx:id="tpLabel" layoutX="548.0" layoutY="502.0" prefHeight="21.0" prefWidth="314.0" textFill="RED" />
+      <Label fx:id="vehicleLabel" layoutX="71.0" layoutY="538.0" prefHeight="21.0" prefWidth="314.0" textFill="RED" />
+      <Label fx:id="cusNameLabel" layoutX="73.0" layoutY="610.0" prefHeight="21.0" prefWidth="314.0" textFill="RED" />
+      <Label fx:id="amountLabel" layoutX="537.0" layoutY="570.0" prefHeight="21.0" prefWidth="314.0" textFill="RED" />
+      <Label fx:id="cusIDLabel" layoutX="548.0" layoutY="435.0" prefHeight="21.0" prefWidth="314.0" textFill="RED" />
+   </children>
+</AnchorPane>
